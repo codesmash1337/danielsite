@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { cn } from "@/lib/utils";
 
 const links = [
@@ -11,19 +11,14 @@ const links = [
   { href: "/about", label: "about" },
 ];
 
+function getInitialDark(): boolean {
+  if (typeof window === "undefined") return true;
+  return localStorage.getItem("theme") !== "light";
+}
+
 export function Nav(): React.JSX.Element {
   const pathname = usePathname();
-  const [dark, setDark] = useState(true);
-
-  useEffect(() => {
-    const stored = localStorage.getItem("theme");
-    if (stored === "light") {
-      setDark(false);
-    } else {
-      setDark(true);
-      document.documentElement.classList.add("dark");
-    }
-  }, []);
+  const [dark, setDark] = useState(getInitialDark);
 
   const toggle = (): void => {
     const next = !dark;
@@ -64,6 +59,7 @@ export function Nav(): React.JSX.Element {
           <button
             onClick={toggle}
             aria-label="Toggle theme"
+            suppressHydrationWarning
             className="text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors"
           >
             {dark ? (
