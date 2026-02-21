@@ -17,13 +17,8 @@ export function Hero(): React.JSX.Element {
       <h1 className="font-mono text-4xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 mb-4">
         Daniel
       </h1>
-      <p className="text-lg text-neutral-600 dark:text-neutral-400 mb-8 max-w-xl leading-relaxed">
-        AI Field Development Engineer at{" "}
-        <span className="text-neutral-900 dark:text-neutral-200 font-medium">
-          Databricks
-        </span>
-        . I build and ship ML systems — from NL→SQL agents to RL competition
-        bots. UIUC MS CS.
+      <p className="font-mono text-sm text-neutral-500 dark:text-neutral-400 mb-8">
+        AI Field Development Engineer · Databricks
       </p>
       <div className="flex items-center gap-6">
         <Link

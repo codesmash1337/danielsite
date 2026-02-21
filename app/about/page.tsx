@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export const metadata = {
   title: "About — Daniel",
   description: "Background, work, and what I'm into.",
@@ -21,83 +19,15 @@ function Section({ title, children }: SectionProps): React.JSX.Element {
   );
 }
 
-interface WorkImageProps {
-  src?: string;
-  alt: string;
-  label: string;
-  sublabel?: string;
-}
-
-function WorkImage({ src, alt, label, sublabel }: WorkImageProps): React.JSX.Element {
-  return (
-    <div className="flex flex-col gap-2">
-      <div className="relative aspect-[4/3] bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 overflow-hidden">
-        {src ? (
-          <Image
-            src={src}
-            alt={alt}
-            fill
-            className="object-cover"
-          />
-        ) : (
-          <div className="absolute inset-0 flex items-center justify-center">
-            <span className="font-mono text-xs text-neutral-400 dark:text-neutral-600">
-              image
-            </span>
-          </div>
-        )}
-      </div>
-      <p className="font-mono text-xs text-neutral-900 dark:text-neutral-100">{label}</p>
-      {sublabel && (
-        <p className="text-xs text-neutral-500 dark:text-neutral-400">{sublabel}</p>
-      )}
-    </div>
-  );
-}
-
 export default function AboutPage(): React.JSX.Element {
   return (
     <article>
       <h1
-        className="font-mono text-2xl font-bold mb-6"
+        className="font-mono text-2xl font-bold mb-12"
         style={{ color: "#c07a5a" }}
       >
         About Me
       </h1>
-
-      <div className="space-y-3 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed mb-14">
-        <p>
-          Rice BS → UIUC MS CS → ML Engineer at{" "}
-          <span className="text-neutral-900 dark:text-neutral-200">Doowii</span>{" "}
-          → AI Field Development Engineer at{" "}
-          <span className="text-neutral-900 dark:text-neutral-200">Databricks</span>.
-        </p>
-        <p>
-          I build ML systems that ship — NL→SQL agents, RAG pipelines, RL
-          agents. I care about things that are actually useful, not just
-          technically interesting.
-        </p>
-      </div>
-
-      <Section title="presented works">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-          <WorkImage
-            alt="PokeAgent — NeurIPS 2025"
-            label="PokeAgent"
-            sublabel="NeurIPS 2025 · 3rd place"
-          />
-          <WorkImage
-            alt="VideoSemble — UIUC Blender Lab"
-            label="VideoSemble"
-            sublabel="UIUC Blender Lab · M.S. thesis"
-          />
-          <WorkImage
-            alt="NL→SQL Agent — Doowii"
-            label="NL→SQL Agent"
-            sublabel="Doowii · 50k+ req/yr"
-          />
-        </div>
-      </Section>
 
       <Section title="background">
         <div className="space-y-2 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
