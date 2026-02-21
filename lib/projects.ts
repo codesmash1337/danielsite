@@ -7,6 +7,7 @@ export const projects: Project[] = [
     company: "NeurIPS 2025 Competition",
     year: "Jul – Nov 2025",
     sortYear: 2025,
+    category: "creative",
     link: "https://github.com/codesmash1337/pokeagent_ac_mcts",
     bullets: [
       "Placed 3rd in PokeAgent, a NeurIPS 2025 competition.",
@@ -22,6 +23,7 @@ export const projects: Project[] = [
     role: "Machine Learning Engineer",
     year: "Aug 2023 – present",
     sortYear: 2023,
+    category: "production",
     bullets: [
       "Engineered a production FastAPI system serving 50,000+ requests annually with 99.6% uptime; optimized end-to-end latency to 14.8s (p95).",
       "Architected multi-model RAG pipeline in LangGraph with multi-node workflow orchestration, failover mechanisms, and strict latency guarantees.",
@@ -36,6 +38,7 @@ export const projects: Project[] = [
     role: "Machine Learning Engineer",
     year: "Aug 2023 – present",
     sortYear: 2023,
+    category: "production",
     bullets: [
       "Scaled student churn prediction to 300+ universities via an automated model factory — validates data sufficiency, merges schemas, trains and deploys per-org XGBoost models via Vertex AI.",
       "Designed a cold/hot feature store on BigQuery with point-in-time joins across heterogeneous tenant schemas; scored 3M+ records/day.",
@@ -50,6 +53,7 @@ export const projects: Project[] = [
     role: "Graduate Research Assistant",
     year: "Aug 2022 – Aug 2023",
     sortYear: 2022,
+    category: "research",
     link: "https://www.ideals.illinois.edu/items/128442",
     bullets: [
       "Architected VideoSemble, a decoder-only transformer fusing frozen CLIP, T5, and Wav2Vec2 embeddings via concatenation and learned temporal modeling, optimized with a contrastive alignment objective.",

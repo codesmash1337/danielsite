@@ -49,6 +49,21 @@ export default function AboutPage(): React.JSX.Element {
         </div>
       </Section>
 
+      <Section title="writing">
+        <div className="space-y-3 text-sm">
+          {/* Add your essays here — title + href */}
+          <a
+            href="#"
+            className="flex items-baseline gap-2 group"
+          >
+            <span className="font-mono text-neutral-400 dark:text-neutral-500 text-xs shrink-0">—</span>
+            <span className="text-neutral-600 dark:text-neutral-400 group-hover:text-neutral-900 dark:group-hover:text-neutral-100 transition-colors">
+              Essay title goes here
+            </span>
+          </a>
+        </div>
+      </Section>
+
       <Section title="reading list">
         <div className="space-y-5 text-sm text-neutral-600 dark:text-neutral-400">
           <div>

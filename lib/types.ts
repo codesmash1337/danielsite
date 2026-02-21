@@ -1,4 +1,5 @@
 export type Tag = "ML" | "NLP" | "RL" | "Production Systems" | "Research";
+export type Category = "production" | "research" | "creative";
 
 export interface Project {
   id: string;
@@ -11,4 +12,5 @@ export interface Project {
   link?: string;
   year: string;
   sortYear: number;
+  category: Category;
 }

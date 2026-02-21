@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Hero } from "@/components/Hero";
+import { RotatingQuote } from "@/components/RotatingQuote";
 
 interface WorkImageProps {
   src?: string;
@@ -55,7 +56,7 @@ export default function Home(): React.JSX.Element {
         <h2 className="font-mono text-xs text-neutral-400 dark:text-neutral-500 uppercase tracking-widest mb-6">
           presented works
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-lg">
           <WorkImage
             alt="PokeAgent — NeurIPS 2025"
             label="PokeAgent"
@@ -66,12 +67,9 @@ export default function Home(): React.JSX.Element {
             label="VideoSemble"
             sublabel="UIUC Blender Lab · M.S. thesis"
           />
-          <WorkImage
-            alt="NL→SQL Agent — Doowii"
-            label="NL→SQL Agent"
-            sublabel="Doowii · 50k+ req/yr"
-          />
         </div>
+
+        <RotatingQuote />
       </div>
     </>
   );
