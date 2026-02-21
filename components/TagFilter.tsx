@@ -15,7 +15,7 @@ export function TagFilter({ projects }: TagFilterProps): React.JSX.Element {
   const [active, setActive] = useState<Tag | null>(null);
 
   const filtered = active
-    ? projects.filter((p) => p.tags.includes(active))
+    ? projects.filter((p) => p.tags?.includes(active))
     : projects;
 
   return (

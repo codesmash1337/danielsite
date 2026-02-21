@@ -1,0 +1,208 @@
+%-------------------------
+% Resume in Latex — Jake Gutierrez style, filled with Daniel Christl content
+%------------------------
+
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{xcolor}
+\definecolor{linkblue}{HTML}{0366D6} % GitHub-ish blue
+\usepackage[colorlinks=true, urlcolor=linkblue, linkcolor=black, citecolor=linkblue]{hyperref}
+\urlstyle{same} % keep URL font consistent with text
+
+\usepackage[english]{babel}
+\usepackage{newunicodechar}
+\newunicodechar{−}{\textminus}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generated pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+
+\newcommand{\resumeItemHeader}[1]{\item\small{\textbf{#1}}\vspace{-8pt}}
+
+\newcommand{\resumeSummary}[1]{%
+  \vspace{2pt}%
+  \noindent\color{black}\titlerule\vspace{6pt}%
+  \begin{center}
+    \begin{minipage}{0.97\textwidth}
+      \small\centering #1
+    \end{minipage}
+  \end{center}\vspace{-6pt}%
+}
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Daniel Christl} \\ \vspace{1pt}
+    \href{mailto:danielpremochristl@gmail.com}{\underline{danielpremochristl@gmail.com}} $|$ 
+    \href{https://linkedin.com/in/daniel-christl}{\underline{linkedin.com/in/daniel-christl}} $|$ 
+    \small Phoenix, AZ (Open to Relocation)
+
+\end{center}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+    {Doowii \textnormal{\textit{| Data Analytics for Education}}}{Aug. 2023 -- Present}
+      {Machine Learning Engineer}{ }
+      
+    \resumeItemHeader{Project: NL$\rightarrow$SQL AI Agent}
+      \resumeItemListStart
+\resumeItem{Engineered a production FastAPI system serving \textbf{50{,}000+} requests annually with \textbf{99.6\%} uptime; optimized end-to-end agent latency to 14.8s (p95).}        \resumeItem{Architected multi-model RAG pipeline in LangGraph with multi-node workflow orchestration, failover mechanisms and strict latency guarantees.}
+        \resumeItem{Improved first-pass query accuracy (exact match) from \textbf{62\%} to \textbf{78\%} on 600+ prod queries using hybrid retrieval (sparse + dense + re-rank; Pinecone vector DB) and schema-aware NER/entity linking.}
+    \resumeItem{Built a custom eval harness (LLM-as-a-judge) to track retrieval precision/recall@k and answer correctness; utilized results to select optimal prompt/model configurations.}    \resumeItem{Cut token costs by \textbf{31\%} and reduced p50 latency (10.3s $\to$ 8.0s) by implementing Redis caching and an intent classifier to route simple queries to smaller, faster models.}
+        \resumeItemListEnd
+        
+\resumeItemHeader{Project: Multi-Tenant Dropout Risk}
+  \resumeItemListStart
+    \resumeItem{Scaled student churn to \textbf{300+} universities by building an automated model factory that validates data sufficiency, performs schema-aware feature merging, and trains/deploys per-org XGBoost models via Vertex AI.}
+  
+    \resumeItem{Designed a cold/hot feature store on BigQuery (append-only historical cold store + nightly hot features) with point-in-time joins across heterogeneous tenant schemas; scored \textbf{3M+} records/day.}
+    
+    \resumeItem{Enforced promotion gates (Precision $>$ 0.6, F1 $>$ 0.4); shipped isotonic-calibrated probabilities plus SHAP-based feature importance for educator-facing interpretability and targeted intervention.}
+    
+    \resumeItem{Implemented multi-tenant monitoring (JSD drift + null-rate checks) with aggregated + per-org alert thresholds; zero-touch onboarding provisions new tenants in $<$24h.}
+    
+  \resumeItemListEnd
+
+
+\resumeSubheading
+  {University of Illinois at Urbana–Champaign}{Aug. 2022 -- Aug. 2023}
+  {Graduate Research Assistant @ \href{https://blender.cs.illinois.edu/}{Blender Lab} \textbar\ \href{https://www.ideals.illinois.edu/items/128442}{M.S. Thesis}}{ }
+  \resumeItemListStart
+    \resumeItem{Architected VideoSemble, a decoder-only transformer fusing frozen CLIP, T5, and Wav2Vec2 embeddings via concatenation and learned temporal modeling, optimized with a contrastive alignment objective.}
+    \resumeItem{Built a distributed pipeline processing \textbf{1.8M} YouTube videos (32B tokens) using Ray and DeepLake; implemented Hamming distance filtering to reduce frame redundancy and Whisper for audio-text alignment.}
+    \resumeItem{Achieved 60.23\% accuracy on the TVQA benchmark; conducted ablation studies demonstrating a \textbf{+3.5\%} performance lift specifically from the audio modality integration.}
+  \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+  \resumeSubHeadingListStart
+\resumeProjectHeading
+  {\textbf{RL-based PokeAgent} \textbar\ \emph{PyTorch, MCTS, Bandits} \textbar\ \href{https://github.com/codesmash1337/pokeagent_ac_mcts}{GitHub}}
+  {Jul. 2025 -- Nov. 2025}
+\resumeItemListStart
+  \resumeItem{Placed \textbf{3\textsuperscript{rd}} in \href{https://pokeagent.github.io/}{PokeAgent}, a NeurIPS 2025 competition.}
+  \resumeItem{Built a Pokémon battle AI: trained a \textbf{200M}-parameter actor–critic via behavior cloning on 950k reconstructed replays, then offline RL on diverse self-play trajectories.}
+  \resumeItem{Integrated AlphaZero-style MCTS; optimized the game engine and state construction in Rust (batched inference, virtual loss) for low-latency search and planning.}
+  \resumeItem{Designed team selection using k-dueling bandits (iterative halving) w/ Bradley–Terry (BT) scores; at tournament time, used contextual bandits (UCB w/ BT priors) for on-the-fly team ranking and selection.}
+\resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Illinois at Urbana–Champaign}{Aug. 2021 -- Aug. 2023}
+      {M.S. in Computer Science (ML Track)}{ }
+    \resumeSubheading
+      {Rice University}{Aug. 2017 -- May 2021}
+      {B.S. in Computer Science}{ }
+  \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Programming}{: Python (Expert), SQL (Advanced)} \\
+     \textbf{ML/AI}{: PyTorch, scikit-learn, XGBoost, Hugging Face, SHAP, Optuna} \\
+     \textbf{LLM/Agents}{: LangChain, LangGraph, RAG, Pinecone} \\
+     \textbf{MLOps/Cloud}{: GCP (Vertex AI, BigQuery, Cloud Run, Pub/Sub), Docker, Kubernetes, Terraform, Ray, Redis} \\
+    }}
+ \end{itemize}
+
+%-------------------------------------------
+\end{document}

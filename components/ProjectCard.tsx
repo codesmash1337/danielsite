@@ -46,22 +46,26 @@ export function ProjectCard({ project }: ProjectCardProps): React.JSX.Element {
           {project.year}
         </span>
       </div>
-      <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed mb-4">
-        {project.description}
-      </p>
-      <div className="flex flex-wrap gap-2">
-        {project.tags.map((tag) => (
-          <span
-            key={tag}
-            className={cn(
-              "text-xs px-2 py-0.5 font-mono",
-              tagColors[tag]
-            )}
-          >
-            {tag}
-          </span>
-        ))}
-      </div>
+      {project.description && (
+        <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed mb-4">
+          {project.description}
+        </p>
+      )}
+      {project.tags && project.tags.length > 0 && (
+        <div className="flex flex-wrap gap-2">
+          {project.tags.map((tag) => (
+            <span
+              key={tag}
+              className={cn(
+                "text-xs px-2 py-0.5 font-mono",
+                tagColors[tag] ?? "bg-neutral-100 text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300"
+              )}
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+      )}
     </Wrapper>
   );
 }
