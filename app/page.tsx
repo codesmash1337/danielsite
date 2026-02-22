@@ -52,8 +52,9 @@ export default function Home(): React.JSX.Element {
           <span className="text-neutral-900 dark:text-neutral-200">Databricks</span>.
         </p>
         <p>
-        AI engineer at Databricks working across production ML, LLM/RAG systems, and reinforcement learning. My engineering-design philosophy is to understand the scope, execute quickly,
-        and add complexity as needed: rapid iteration and high-level understanding are key as AI tools become increasingly powerful. 
+        AI engineer at Databricks working across production ML, LLM/RAG systems, and reinforcement learning. 
+        As AI gets more powerful, engineering shifts from implementation towards design. I build systems by understanding the scope, 
+        executing quickly, and adding complexity only as needed.
           
         </p>
       </div>
