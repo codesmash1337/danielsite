@@ -13,8 +13,8 @@ export function Hero(): React.JSX.Element {
       <p className="font-mono text-sm text-neutral-500 dark:text-neutral-400 mb-3">
         Hi, I&apos;m
       </p>
-      <h1 className="font-mono text-4xl font-bold tracking-tight text-[#E2725B] dark:text-[#E2725B] mb-4">
-        <span style={{ color: "#c07a5a" }}>Daniel</span>
+      <h1 className="font-mono text-4xl font-bold tracking-tight text-teal-600 dark:text-[#c07a5a] mb-4">
+        Daniel
       </h1>
       <p className="font-mono text-sm text-neutral-500 dark:text-neutral-400 mb-8">
         AI Engineer · Databricks

@@ -20,8 +20,8 @@ export default function WorkPage(): React.JSX.Element {
 
   return (
     <section>
-      <h1 className="font-mono text-2xl font-bold mb-8">
-      <span style={{ color: "#c07a5a" }}>Work</span>
+      <h1 className="font-mono text-2xl font-bold text-teal-600 dark:text-[#c07a5a] mb-8">
+        Work
       </h1>
 
       {/* Tabs */}

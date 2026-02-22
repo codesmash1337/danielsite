@@ -33,7 +33,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col bg-neutral-50 dark:bg-[#0a0a0a] text-neutral-900 dark:text-[#e5e5e5]`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col bg-[#f7f5f2] dark:bg-[#0a0a0a] text-neutral-900 dark:text-[#e5e5e5]`}
       >
         <Nav />
         <main className="flex-1 max-w-3xl mx-auto w-full px-6 py-12">

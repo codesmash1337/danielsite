@@ -22,10 +22,7 @@ function Section({ title, children }: SectionProps): React.JSX.Element {
 export default function AboutPage(): React.JSX.Element {
   return (
     <article>
-      <h1
-        className="font-mono text-2xl font-bold mb-12"
-        style={{ color: "#c07a5a" }}
-      >
+      <h1 className="font-mono text-2xl font-bold text-teal-600 dark:text-[#c07a5a] mb-12">
         About Me
       </h1>
 
