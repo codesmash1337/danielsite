@@ -52,8 +52,7 @@ export default function Home(): React.JSX.Element {
           <span className="text-neutral-900 dark:text-neutral-200">Databricks</span>.
         </p>
         <p>
-        I'm an AI engineer at Databricks who builds intelligent systems and studies the underlying theory. 
-        My work spans production ML, RAG/LLM systems, and RL. My philosophy is to nail the scope, execute quickly,
+        AI engineer at Databricks working across production ML, LLM/RAG systems, and reinforcement learning. My engineering-design philosophy is to understand the scope, execute quickly,
         and add complexity as needed: rapid iteration and high-level understanding are key as AI tools become increasingly powerful. 
           
         </p>
